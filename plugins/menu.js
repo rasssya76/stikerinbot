@@ -6,27 +6,28 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌─〔 %me 〕
-├ Hai, %name!
-│
-├ Tersisa *%limit Limit*
-├ Role *%role*
-├ Level *%level (%exp / %maxexp)* [%xp4levelup]
-├ %totalexp XP secara Total
-│ 
-├ Tanggal: *%week %weton, %date*
-├ Tanggal Islam: *%dateIslamic*
-├ Waktu: *%time*
-│
-├ Uptime: *%uptime (%muptime)*
-├ Database: %rtotalreg dari %totalreg
-├ Github:
-├ %github
-└────
+ _*INFO USER*_
+ _Nama *%name*_
+ _Tersisa *%limit Limit*_
+ _Role *%role*_
+ _Level *%level (%exp / %maxexp)* [%xp4levelup]_
+ _%totalexp XP secara Total_
+ 
+ _*WAKTU*_
+ _Tanggal: *%week %weton, %date*_
+ _Tanggal Islam: *%dateIslamic*_
+ _Waktu: *%time*_
+  
+ _*INFO BOT*_
+ _Uptime: *%uptime (%muptime)*_
+ _Database: %rtotalreg dari %totalreg_
+ _Github:_
+ _%github_
+
 %readmore`.trimStart(),
-  header: '┌─〔 %category 〕',
-  body: '├ %cmd %islimit %isPremium',
-  footer: '└────\n',
+  header: '❏━━「 *%category* 」',
+  body: ' _%cmd %islimit %isPremium_',
+  footer: '\n',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -189,76 +190,76 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
           "title": `${ucapan()}, ${name}`.trim(),
-          "description": "© stikerin",
-          "buttonText": "Klik Disini",
+          "description": "© R-BOT",
+          "buttonText": "TOUCH HERE",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
               "rows": [
                 {
-                  "title": `Semua Perintah`,
+                  "title": `Semua Perintah🌐`,
                   "description": "",
                   "rowId": `${_p}? all`
                 }, {
-                  "title": "Game",
+                  "title": "Game🎮",
                   "description": "",
                   "rowId": `${_p}? game`
 
                 }, {
-                  "title": "XP",
+                  "title": "XP🔨",
                   "description": "",
                   "rowId": `${_p}? xp`
 
                 }, {
-                  "title": "Stiker",
+                  "title": "Stiker⭕",
                   "description": "",
                   "rowId": `${_p}? stiker`
                 }, {
-                  "title": "Kerang Ajaib",
+                  "title": "Kerang Ajaib🍎",
                   "description": "",
                   "rowId": `${_p}? kerangajaib`
                 }, {
-                  "title": "Quotes",
+                  "title": "Quotes✍️",
                   "description": "",
                   "rowId": `${_p}? quotes`
                 }, {
-                  "title": "Admin",
+                  "title": "Admin👥",
                   "description": "",
                   "rowId": `${_p}? admin`
                 }, {
-                  "title": "Grup",
+                  "title": "Grup👥",
                   "description": "",
                   "rowId": `${_p}? grup`
                 }, {
-                  "title": "Premium",
+                  "title": "Premium👤",
                   "description": "",
                   "rowId": `${_p}? premium`
                 }, {
-                  "title": "Internet",
+                  "title": "Internet🌐",
                   "description": "",
                   "rowId": `${_p}? internet`
                 }, {
-                  "title": "Anonymous",
+                  "title": "Anonymous👾",
                   "description": "",
                   "rowId": `${_p}? anonymous`
                 }, {
-                  "title": "Nulis & Logo",
+                  "title": "Nulis & Logo✍️",
                   "description": "",
                   "rowId": `${_p}? nulis`
                 }, {
-                  "title": "Downloader",
+                  "title": "Downloader📁",
                   "description": "",
                   "rowId": `${_p}? downloader`
                 }, {
-                  "title": "Tools",
+                  "title": "Tools🔨",
                   "description": "",
                   "rowId": `${_p}? tools`
                 }, {
-                  "title": "Fun",
+                  "title": "Fun🍎",
                   "description": "",
                   "rowId": `${_p}? fun`
                 }, {
-                  "title": "Database",
+                  "title": "Database🗃️",
                   "description": "",
                   "rowId": `${_p}? database`
                 }, {
@@ -266,27 +267,27 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "description": "",
                   "rowId": `${_p}? vote`
                 }, {
-                  "title": "Al-Qur\'an",
+                  "title": "Al-Qur\'an🕌",
                   "description": "",
                   "rowId": `${_p}? quran`
                 }, {
-                  "title": "Pengubah Suara",
+                  "title": "Pengubah Suara💽",
                   "description": "",
                   "rowId": `${_p}? audio`
                 }, {
-                  "title": "Jadi Bot",
+                  "title": "Jadi Bot🤖",
                   "description": "",
                   "rowId": `${_p}? jadibot`
                 }, {
-                  "title": "Info",
+                  "title": "Info🔨",
                   "description": "",
                   "rowId": `${_p}? info`
                 }, {
-                  "title": "Tanpa Kategori",
+                  "title": "Tanpa Kategori⭕",
                   "description": "",
                   "rowId": `${_p}? tanpakategori`
                 }, {
-                  "title": "Owner",
+                  "title": "Owner👥",
                   "description": "",
                   "rowId": `${_p}? owner`
                 }
@@ -302,31 +303,31 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     }
     // gunakan ini jika kamu menggunakan whatsapp bisnis
     //   throw `
-    // ┌〔 DAFTAR MENU 〕
-    // ├ ${_p + command} all
-    // ├ ${_p + command} game
-    // ├ ${_p + command} xp
-    // ├ ${_p + command} stiker
-    // ├ ${_p + command} kerang
-    // ├ ${_p + command} quotes
-    // ├ ${_p + command} admin
-    // ├ ${_p + command} group
-    // ├ ${_p + command} premium
-    // ├ ${_p + command} internet
-    // ├ ${_p + command} anonymous
-    // ├ ${_p + command} nulis
-    // ├ ${_p + command} downloader
-    // ├ ${_p + command} tools
-    // ├ ${_p + command} fun
-    // ├ ${_p + command} database
-    // ├ ${_p + command} vote
-    // ├ ${_p + command} quran
-    // ├ ${_p + command} audio
-    // ├ ${_p + command} jadibot
-    // ├ ${_p + command} info
-    // ├ ${_p + command} tanpa kategori
-    // ├ ${_p + command} owner
-    // └────  
+    // 〔 DAFTAR MENU 〕
+    //  ${_p + command} all
+    //  ${_p + command} game
+    //  ${_p + command} xp
+    //  ${_p + command} stiker
+    //  ${_p + command} kerang
+    //  ${_p + command} quotes
+    //  ${_p + command} admin
+    //  ${_p + command} group
+    //  ${_p + command} premium
+    //  ${_p + command} internet
+    //  ${_p + command} anonymous
+    //  ${_p + command} nulis
+    //  ${_p + command} downloader
+    //  ${_p + command} tools
+    //  ${_p + command} fun
+    //  ${_p + command} database
+    //  ${_p + command} vote
+    //  ${_p + command} quran
+    //  ${_p + command} audio
+    //  ${_p + command} jadibot
+    //  ${_p + command} info
+    //  ${_p + command} tanpa kategori
+    //  ${_p + command} owner
+    // 
     //     `.trim()
     let groups = {}
     for (let tag in tags) {
