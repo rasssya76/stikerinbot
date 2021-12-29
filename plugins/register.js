@@ -16,15 +16,14 @@ let handler = async function (m, { text, usedPrefix, command }) {
   user.registered = true
   let sn = createHash('md5').update(m.sender).digest('hex')
   m.reply(`
-Daftar berhasil!
+*Daftar berhasil!*
 
-┌─〔 Info 〕
-├ Nama: ${name}
-├ Umur: ${age} tahun
-├ SN: ${sn}
-└────
+_*Info*_
+_Nama: ${name}_
+_Umur: ${age} tahun_
+_SN: ${sn}_
 
-simpan/bintangi pesan ini karena SN (Serial Number) digunaan untuk daftar ulang
+_*simpan/bintangi pesan ini karena SN (Serial Number) digunaan untuk daftar ulang*_
 `.trim())
 }
 handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <nama>.<umur>')
